@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Emotion Analysis</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <section id="instructions" class="instructions">
+        <div class="container">
+		    <h1 class="fade-in">AstridEmo</h1>
+            <h2 class="fade-in">How to use the tool?</h2>
+            <div class="instruction-cards">
+                <div class="card">
+                    <i class="fas fa-pencil-alt"></i>
+                    <h3>1. Enter Text</h3>
+                    <p>Paste or type text into the analysis field. This can be a book excerpt, article, message or any other text.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-cogs"></i>
+                    <h3>2. Basic Analysis</h3>
+                    <p>Click the <strong>"🔍 Basic Analysis"</strong> button to start. This mode detects basic text emotions like joy, sadness, anger and neutrality, providing a general mood overview.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-cogs"></i>
+                    <h3>3. Advanced Analysis</h3>
+                    <p>Click the <strong>"🔍 Advanced Analysis"</strong> button for deeper analysis. This mode evaluates subtle emotions like anxiety, dissatisfaction, excitement, and examines text tonality.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-eraser"></i>
+                    <h3>4. Clear Text</h3>
+                    <p>To start over, click the <strong>"🧹 Clear"</strong> button. It will delete all text and analysis results.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-question-circle"></i>
+                    <h3>5. Analysis Refinement</h3>
+                    <p>In the <strong>"Analysis Instructions"</strong> field you can add extra guidance about what to focus on in the text.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-clipboard"></i>
+                    <h3>6. Paste Text</h3>
+                    <p>Use the <strong>"📋 Paste"</strong> button to quickly paste text from clipboard.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-file-export"></i>
+                    <h3>7. Export Results</h3>
+                    <p>After analysis you can save results to a text file by clicking the <strong>"📤 Export"</strong> button.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="emotion-analysis" class="emotion-analysis">
+        <div class="container">
+            <h2 class="fade-in">AstridEmo</h2>
+            <textarea id="text-input" placeholder="Enter text for emotion analysis..."></textarea>
+            <br>
+            <textarea id="custom-instruction" placeholder="Analysis instructions (e.g. what to focus on)..."></textarea>
+            <div id="analysis-type">
+                <button id="simple-analysis-btn" class="btn">🔍 Basic Analysis</button>
+                <button id="advanced-analysis-btn" class="btn">🔍 Advanced Analysis</button>
+                <button id="paste-btn" class="btn">📋 Paste</button>
+                <button id="clear-btn" class="btn">🧹 Clear</button>
+                <button id="export-btn" class="btn">📤 Export</button>
+                <div id="export-modal" class="modal">
+                    <div class="modal-content">
+                        <h3>Select export format</h3>
+                        <button id="export-txt" class="btn">Text file (txt)</button>
+                        <button id="close-modal" class="btn">Close</button>
+                    </div>
+                </div>
+            </div>
+            <div id="result" class="result"></div>
+            <div id="loading" class="loading" style="display: none;">Analyzing, please wait...</div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pizzip/3.1.1/pizzip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/docxtemplater/3.20.0/docxtemplater.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
