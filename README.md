@@ -1,4 +1,4 @@
-# AstridEmoo
+# AstridEmo
 # Emotion Analysis Tool 🔍
 
 A web-based AI tool that analyzes emotional tones in text. Perfect for content writers, marketers, and UX researchers.
