@@ -27,34 +27,11 @@ Evaluate the emotional intensity (low, medium, high).
 Provide a brief explanation of what creates this emotional tone.
 Avoid including the original text in your response, only the analysis.`;
     } else if (analysisType === 'advanced') {
-        prompt = `Conduct a comprehensive emotional analysis of this text: "${cleanedText}"
+        prompt = `Conduct a comprehensive emotional analysis of this text: "${cleanedText}
 
-1. Primary Emotional Tone:
-   - Dominant emotion category
-   - Intensity level (1-10 scale)
-   - Confidence score
-
-2. Emotional Journey:
-   - How emotions evolve through the text
-   - Key emotional turning points
-   - Contrast between beginning and ending emotions
-
-3. Linguistic Markers:
-   - Specific words/phrases creating emotional impact
-   - Sentence structures influencing tone
-   - Punctuation contributing to emotional effect
-
-4. Contextual Factors:
-   - How the emotional tone serves the text's purpose
-   - Potential cultural influences on emotional expression
-   - Subtextual emotional undercurrents
-
-5. Comparative Analysis:
-   - How this emotional profile compares to similar texts
-   - Unusual or noteworthy emotional patterns
-
-Provide your analysis in clear, structured sections. Focus specifically on emotional content rather than other textual features. Do not include the original text in your response.`;
+Provide your analysis in clear,see on genre, structured sections. Focus specifically on emotional content rather than other textual features. Do not include the original text in your response.`;
     }
+
 
     if (customInstruction) {
         prompt += ` Additional consideration: ${customInstruction}`;
