@@ -217,3 +217,34 @@ button:hover {
         font-size: 1em;
     }
 }
+.footer {
+    background-color: #6a0dad;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-family: 'Inter', sans-serif; 
+    transition: background-color 0.3s ease-in-out;
+}
+
+.footer:hover {
+    background-color: #581890;
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+	height: 43px;
+}
+
+.footer p {
+    margin: 5px 0;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.footer:hover p {
+    transform: scale(1.05);
+    color: #e0e0e0; 
+}
